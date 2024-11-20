@@ -1,21 +1,21 @@
 type DrinkCategory = "炭酸" | "コーヒー" | "お茶" | "水" | "ジュース" | "エナジー";
 
-interface Drink {
+export interface Drink {
     name: string;
     price: number;
     category: DrinkCategory;
 }
 
-interface Floor {
+export interface Floor {
     drinks: Drink[];
 }
 
-interface Floors {
-    [fllor: `${number}F`]: Floor;
+export interface FloorNumbers {
+    [floor: `${number}F`]: Floor;
 }
 
-interface DrinksData {
-    floors: Floors;
+export interface DrinksData {
+    floors: FloorNumbers;
     metadata?: {
         lastUpdated: string;
     };
@@ -318,7 +318,7 @@ const drinks: Drink[] = [
         name: "FIRE コクと香りの挽きたて微糖",
         price: 120,
         category: "コーヒー",
- 
+
     },
     {
         name: "FIRE Black",
@@ -454,7 +454,7 @@ const drinks: Drink[] = [
         name: "FIRE コクと香りの挽きたて微糖",
         price: 120,
         category: "コーヒー",
- 
+
     },
     {
         name: "FIRE Black",
@@ -533,8 +533,51 @@ const drinks: Drink[] = [
         price: 110,
         category: "エナジー"
     },
-]
-    
+    {
+        name: "やかんの麦茶 香ばしい",
+        price: 110,
+        category: "お茶",
+    },
+    {
+        name: "綾鷹",
+        price: 130,
+        category: "お茶",
+    },
+    {
+        name: "いろはす",
+        price: 100,
+        category: "水",
+    },
+    {
+        name: "GEORGIA Coffee THE LATTE キャラメル",
+        price: 130,
+        category: "コーヒー",
+    },
+    {
+        name: "綾鷹",
+        price: 110,
+        category: "お茶",
+    },
+    {
+        name: "紅茶花伝 ロイヤルミルクティー",
+        price: 120,
+        category: "お茶",
+    },
+    {
+        name: "GEORGIA Coffee 香るブラック",
+        price: 110,
+        category: "コーヒー",
+    },
+    {
+        name: "GEORGIA Coffee EMERALD MOUNTAIN",
+        price: 100,
+        category: "コーヒー"
+    },
+    //66666
+    ]
+
+
+
 
 export const drinksData:DrinksData = {
     floors: {
@@ -615,7 +658,7 @@ export const drinksData:DrinksData = {
                 price: 100,
                 category: "コーヒー"
             },
-    
+
             ]
         },
         "3F":{
@@ -747,6 +790,111 @@ export const drinksData:DrinksData = {
             },
             ]
         },
+        "5F": {
+            "drinks": [
+            {
+                name: "れもんプラス いろはす",
+                price: 130,
+                category: "水",
+            },
+            {
+                name: "紅茶花伝 グレープミックスティー",
+                price: 120,
+                category: "お茶",
+            },
+            {
+                name: "アロエ&白ぶどう",
+                price: 120,
+                category: "ジュース",
+            },
+            {
+                name: "Coca-cola",
+                price: 110,
+                category: "炭酸"
+            },
+            {
+                name: "Sprite",
+                price: 110,
+                category: "炭酸",
+            },
+            {
+                name: "Dr Pepper",
+                price: 110,
+                category: "炭酸"
+            },
+            {
+                name: "REAL GOLD",
+                price: 110,
+                category: "エナジー"
+            },
+            {
+                name: "やかんの麦茶 香ばしい",
+                price: 110,
+                category: "お茶",
+            },
+            {
+                name: "綾鷹",
+                price: 130,
+                category: "お茶",
+            },
+            {
+                name: "いろはす",
+                price: 100,
+                category: "水",
+            },
+            {
+                name: "GEORGIA Coffee THE LATTE キャラメル",
+                price: 130,
+                category: "コーヒー",
+            },
+            {
+                name: "綾鷹",
+                price: 110,
+                category: "お茶",
+            },
+            {
+                name: "紅茶花伝 ロイヤルミルクティー",
+                price: 120,
+                category: "お茶",
+            },
+            {
+                name: "GEORGIA Coffee 香るブラック",
+                price: 110,
+                category: "コーヒー",
+            },
+            {
+                name: "GEORGIA Coffee EMERALD MOUNTAIN",
+                price: 100,
+                category: "コーヒー"
+            },
+            ]
+        },
+        "6F": {
+            "drinks": [
+
+            ]
+        },
+        "7F": {
+            "drinks": [
+
+            ]
+
+        },
+        "8F": {
+            "drinks": [
+
+            ]
+        },
+        "9F": {
+            "drinks": [
+
+            ]
+        },
+        "10F": {
+            "drinks": [
+
+            ]
+        }
     },
     metadata: {
         lastUpdated: "2024/11/17"
