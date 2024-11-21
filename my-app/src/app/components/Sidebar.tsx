@@ -5,11 +5,11 @@ export const Sidebar:React.FC = () => {
 
     return(
     <div
-    className="flex flex-col h-screen  bg-white"
+    className="flex flex-col h-screen  "
     >
         {floors.map( floor => (
             <div
-            className="flex items-center justify-center flex-1 rounded-full font-bold p-4 bg-black text-white "
+            className="flex items-center justify-center flex-1 rounded-full font-bold p-4 bg-zinc-800 text-white "
             key={floor}
             >
                 {floor}階
