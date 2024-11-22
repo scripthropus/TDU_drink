@@ -1,4 +1,5 @@
-type DrinkCategory = "炭酸" | "コーヒー" | "お茶" | "水" | "ジュース" | "エナジー";
+export type DrinkCategory = "炭酸" | "コーヒー" | "お茶" | "水" | "ジュース" | "エナジー";
+export type FloorsNumber = "1F" | "2F" | "3F" | "4F" | "5F" | "6F" | "7F" | "8F" | "9F" | "10F";
 
 export interface Drink {
     name: string;
@@ -10,12 +11,9 @@ export interface Floor {
     drinks: Drink[];
 }
 
-export interface FloorNumbers {
-    [floor: `${number}F`]: Floor;
-}
 
 export interface DrinksData {
-    floors: FloorNumbers;
+    floors: Record<FloorsNumber, Floor>;
     metadata?: {
         lastUpdated: string;
     };
@@ -661,6 +659,9 @@ export const drinksData:DrinksData = {
 
             ]
         },
+        "2F": {//自販機がない
+            drinks:[]
+        },
         "3F":{
             drinks:[
             {
@@ -789,6 +790,9 @@ export const drinksData:DrinksData = {
                 category: "コーヒー"
             },
             ]
+        },
+        "4F": {//自販機がない
+            drinks:[]
         },
         "5F": {
             "drinks": [
